@@ -26,7 +26,7 @@ format:
 	uv run black .
 
 pre-commit-install:
-	pre-commit install
+	.venv/bin/pre-commit install
 
 clean:
 	find . -type d -name "__pycache__" -exec rm -r {} + 2>/dev/null || true
@@ -36,4 +36,3 @@ clean:
 	find . -type d -name ".ruff_cache" -exec rm -r {} + 2>/dev/null || true
 	rm -rf outputs/
 	rm -rf .hydra/
-
